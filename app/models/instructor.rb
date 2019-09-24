@@ -1,18 +1,18 @@
 class Instructor
 
-    attr_accessor :name 
+    attr_accessor :name
 
     @@all = []
 
     def initialize(name)
-        @name = name 
-        @@all << self 
+        @name = name
+        @@all << self
     end
 
-    def self.all 
-        @@all 
+    def self.all
+        @@all
     end
-    
+
     def pass_student(student, test_name)
         testtopass= BoatingTest.all.find{|test| test.student.first_name == student.first_name && test.name == test_name}
         if testtopass
