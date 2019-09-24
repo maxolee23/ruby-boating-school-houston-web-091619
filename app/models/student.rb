@@ -6,11 +6,11 @@ class Student
 
     def initialize(first_name)
         @first_name = first_name
-        @@all << self
+        @@all << self 
     end
-
-    def self.all
-        @@all
+    
+    def self.all 
+        @@all 
     end
 
     def add_boating_test(test_name, test_status, instructor)
@@ -19,8 +19,8 @@ class Student
 
     def self.find_student(name)
         self.all.find do |student|
-            student.first_name == name
-        end
+            student.first_name == name 
+        end 
     end
 
     def grade_percentage
